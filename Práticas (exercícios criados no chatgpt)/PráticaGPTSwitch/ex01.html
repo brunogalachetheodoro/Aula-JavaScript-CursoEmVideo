@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meses Do Ano</title>
+</head>
+<body>
+    <h1> Qual Mês Estamos?</h1>
+    Inserir o número do mês correspondente: <input type="number" name="mes" id="mes">
+    <input type="button" value="enviar" onclick="enviar()">
+    <div id="res"></div>
+    <script>
+        function enviar () {
+
+            let mes = document.getElementById('mes')
+            let res = document.getElementById('res')
+            let mesInserido = parseInt(mes.value)
+
+            switch(mesInserido) {
+                case '1':
+                    res.innerHTML= 'O mês inserido foi <strong> Janeiro </strong>.'
+                    break;
+                case '2': 
+                    res.innerHTML= 'O mês inserido foi <strong> Fevereiro </strong>.'
+                    break;
+                case '3':
+                    res.innerHTML= 'O mês inserido foi <strong> Março </strong>.'
+                    break;
+                case'4': 
+                    res.innerHTML= 'O mês inserido foi <strong> Abril </strong>.'
+                    break;
+                case'5':
+                    res.innerHTML= 'O mês inserido foi <strong> Maio </strong>.'
+                    break;
+                case'6':
+                    res.innerHTML= 'O mês inserido foi <strong> Junho </strong>.'
+                    break;
+                case'7':
+                    res.innerHTML= 'O mês inserido foi <strong> Julho </strong>.'
+                    break;
+                case '8':
+                    res.innerHTML= 'O mês inserido foi <strong> Agosto </strong>.'
+                    break;
+                case '9':
+                    res.innerHTML= 'O mês inserido foi <strong> Setembro </strong>.'
+                    break;
+                case '10': 
+                    res.innerHTML= 'O mês inserido foi <strong> Outubro </strong>.'
+                    break;
+                case '11':
+                    res.innerHTML= 'O mês inserido foi <strong> Novembro </strong>.'
+                    break;
+                case '12':
+                    res.innerHTML= 'O mês inserido foi <strong> Dezembro </strong>.'
+                    break;
+                default:
+                    res.innerHTML= 'Mês não reconhecido, favor, inserir novamente!'
+                    break;                    
+            } 
+        }
+    </script>
+</body>
+</html>

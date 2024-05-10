@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    <h1>Sequência de Fibonacci</h1>
+    <p>Até quantos vezes executar a sequência de fibonacci?</p>
+    <input type="number" name="num" id="num">
+    <input type="button" value="Mostrar" onclick="clicar()">
+    <div id="res"></div>
+    
+    <script>
+        function clicar() {
+            let num = Number(document.getElementById("num"))
+            let res = document.getElementById("res")
+            let numInserido = Number(num.value)
+
+            let f1 = 0
+            let f2 = 1
+            let c = 0
+            let fib = 0
+
+            while (c < numInserido ) {
+                fib = f1 + f2
+
+                res.innerHTML += `${f1} + ${f2} = ${fib} <br>`
+
+                c++
+
+                f1 = f2
+                f2 = fib
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <p>Insira um número: <input type="number" name="n" id="n"> <input type="button" value="Gerar Tábuada" onclick="gerar()"></p>
+    <div id="res"></div>    
+
+    <script>
+        function gerar() {
+            let n = document.getElementById('n')
+            let res = document.getElementById('res')
+
+            let nInserido = Number(n.value)
+            let mult = 0
+            for (let c = 1; c <= 10; c++) {
+                mult = c * nInserido
+                res.innerHTML += `${nInserido} x ${c} = ${mult}<br>`
+            }
+        }
+    </script>
+</body>
+</html>

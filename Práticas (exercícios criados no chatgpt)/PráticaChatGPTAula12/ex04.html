@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Que Horas São?</h1>
+    <input type="number" name="hora" id="hora">
+    <input type="button" value="enviar" onclick="enviar()">   
+    <div id="res"></div>
+
+    <script>
+        function enviar () {
+            let hora = document.getElementById('hora')
+            let res = document.getElementById('res')
+
+            let horaInserida = Number (hora.value)
+
+            res.innerHTML = `Agora são ${horaInserida} horas.`
+
+            if (horaInserida >6 && horaInserida < 12) {
+                res.innerHTML += ' Bom Dia!'
+            } else if (horaInserida >= 12 && horaInserida <18) {
+                res.innerHTML += ' Boa Tarde!'
+            } else if (horaInserida >=18 && horaInserida <=24 ) {
+                res.innerHTML += ' Boa Noite!'
+            } else {
+                res.innerHTML += ' Boa Madrugada!'
+            }
+
+        }
+    </script>
+</body>
+</html>

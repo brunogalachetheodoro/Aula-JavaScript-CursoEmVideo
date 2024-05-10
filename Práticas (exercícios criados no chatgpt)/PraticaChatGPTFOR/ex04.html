@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma Dos Números</title>
+</head>
+<body>
+        <h1>Soma Dos Números</h1>
+        <p> Digite um número: <input type="number" name="n" id="n"> <input type="button" value="somar" onclick="somar()"> </p>
+        <div id="res"></div>
+
+        <script>
+            function somar() {
+            let n = document.getElementById('n')
+            let res = document.getElementById('res')
+            
+            let nInserido = Number(n.value)
+            let soma = 0
+
+            for (let c = 1; c <= nInserido; c++ ) {
+                
+                res.innerHTML += `${soma} + ${c} = `
+                soma += c;
+                res.innerHTML += `${soma} <br>`
+
+            }
+        }
+        </script>
+
+</body>
+</html>

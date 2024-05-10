@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha Cor</title>
+</head>
+<body>
+    <h1>Escolha a Cor:</h1>
+    <h4>[R] = Vermelho | [G] = Verde | [B] = Azul | [Y] = Amarelo </h4>
+    <input type="text" name="cor" id="cor">
+    <input type="button" value="enviar" onclick="enviar()">
+    <div id="res"></div>
+
+    <script>
+        function enviar() {
+            let cor = document.getElementById('cor')
+            let res = document.getElementById('res')
+            let corInserida = cor.value
+
+            switch (corInserida) {
+                case 'R':
+                    res.innerHTML = 'A cor escolhida foi <strong>Vermelho</strong>'
+                break;
+                case 'G':
+                    res.innerHTML = 'A cor escolhida foi <strong>Verde</strong>'
+                break;
+                case 'B':
+                    res.innerHTML = 'A cor escolhida foi <strong>Azul</strong>'
+                break;
+                case 'Y':
+                    res.innerHTML = 'A cor escolhida foi <strong>Amarelo</strong>'
+                break;
+                default:
+                    res.innerHTML = 'Cor não reconhecida. Favor, tentar novamente.'
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

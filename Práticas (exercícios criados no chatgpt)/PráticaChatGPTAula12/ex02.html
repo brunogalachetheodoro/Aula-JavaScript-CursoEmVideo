@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+</head>
+<body>
+    <h1>Digite Sua Nota</h1>  
+    <input type="number" name="nota" id="nota">
+    <input type="button" value="enviar" onclick="clicar()">
+    <div id="res"></div>
+
+    <script>
+        function clicar() {
+            let nota = document.getElementById('nota')
+            let res = document.getElementById('res')
+            let notaInserida = Number(nota.value)
+
+  
+            res.innerHTML= `<p> A nota inserida foi ${notaInserida} </p>`
+            
+            if (notaInserida >= 7) {
+                res.innerHTML += '<p>Você passou de ano!</p>'
+            } else if (notaInserida >= 4 && notaInserida <7) {
+                res.innerHTML += '<p>Você está de recuperação</p>'
+                if (notaInserida >= 5) {
+                    res.innerHTML += '<p>Você ainda conseguiu a nota mínima para passar de ano</p>'
+                }
+               
+            }  else {
+                res.innerHTML += '<p>Você foi reprovado</p>'
+            }    
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamento</title>
+</head>
+<body>
+    <h1>Selecione um Departamento</h1>   
+    <h2>Digite: [vendas/ suporte/ financeiro]</h2>
+    <input type="text" name="departamento" id="departamento"> 
+    <input type="button" value="Entrar Em Contato" onclick="enviar()"> 
+    <div id="res"></div>
+
+    <script>
+        function enviar () {
+
+        let departamento = document.getElementById ('departamento')
+        let res = document.getElementById ('res')
+
+        let dInserido = departamento.value
+
+        if (dInserido == 'vendas' ) {
+            res.innerHTML = 'Olá, seja bem vindo ao departamento de vendas!'
+        } else if (dInserido == 'suporte') {
+            res.innerHTML = 'Olá, seja bem vindo ao departamento de suporte!'
+        } else if (dInserido == 'financeiro') {
+            res.innerHTML = 'Olá, seja bem vindo ao departamento de finanças!'
+        } else {
+            res.innerHTML = 'Olá, infelizmente não identificamos um departamento com os dados inserido. Verifique as informações e tente novamente!'
+        }
+
+        }
+    </script>
+</body>
+</html>

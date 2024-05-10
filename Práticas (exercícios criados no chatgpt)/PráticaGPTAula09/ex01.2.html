@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Não Ordenada</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1> Lista Não Ordenada</h1>
+
+    <input type = 'button' value = 'Clique Aqui' onclick="alterar()">
+
+    <ul>
+        <li> Item 1</li>
+        <li> Item 2</li>
+        <li> Item 3</li>
+        <li> Item 4</li>
+        <li> Item 5</li>
+    </ul>
+    <script>
+        const lista = document.getElementsByTagName('li')
+
+        for (let i = 0; i < lista.length; i++) {
+            lista[i].textContent= 'Item Alterado';
+        }
+
+        function alterar () {
+            document.write('Botão Clicado!')
+        }
+    </script>
+    
+</body>
+</html>

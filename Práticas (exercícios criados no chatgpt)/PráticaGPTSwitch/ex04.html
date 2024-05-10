@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comida</title>
+</head>
+<body>
+    <h1> Escolha Seu Prato:</h1>
+    <h4>[1] = PF | [2] = Lasanha | [3] = Lanche | [4] = Sushi | [5] = Pizza</h4> 
+    <input type="text" name="prato" id="prato">
+    <input type="button" value="Enviar" onclick="enviar ()">
+    <div id="res"></div>
+
+    <script>
+        function enviar () {
+            let prato = document.getElementById ('prato')
+            let res = document.getElementById('res')
+            let pratoInserido = prato.value
+
+            switch (pratoInserido){
+                case '1':
+                    res.innerHTML = 'O prato escolhido foi: <strong>Prato Feito</strong>'
+                    break;
+                case '2':
+                    res.innerHTML = 'O prato escolhido foi: <strong>Lasanha</strong>'
+                    break;
+                case '3':
+                    res.innerHTML = 'O prato escolhido foi: <strong>Lanche</strong>'
+                    break;
+                case '4':
+                    res.innerHTML = 'O prato escolhido foi: <strong>Sushi</strong>'
+                    break;
+                case '5':
+                    res.innerHTML = 'O prato escolhido foi: <strong>Pizza</strong>'
+                    break;
+                default :
+                    res.innerHTML = 'Prato não reconhecido. Tente novamente!'
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

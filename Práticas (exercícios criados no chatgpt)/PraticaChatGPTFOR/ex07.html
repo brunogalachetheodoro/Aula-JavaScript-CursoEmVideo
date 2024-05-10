@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequeência</title>
+</head>
+<body>
+    <h1>Sequência</h1>  
+    <p>Número Inicial: <input type="number" name="n1" id="n1"></p>
+    <p>Número Final: <input type="number" name="n2" id="n2"></p>
+    <p> Passos: <input type="number" name="n3" id="n3"></p>
+    <p><input type="button" value="Gerar" onclick="gerar()"></p>
+
+    <div id="res"></div>
+
+    <script>
+        function gerar() {
+            n1 = parseInt(document.getElementById('n1').value)
+            n2 = parseInt(document.getElementById('n2').value)
+            n3 = parseInt(document.getElementById('n3').value)
+            res = document.getElementById('res')
+
+            soma = 0
+
+            for (let c = n1; c <= n2; c = c + n3) {
+                
+                soma = c
+
+                res.innerHTML+= `${soma} <br>`
+            }
+        }
+    </script>
+</body>
+</html>

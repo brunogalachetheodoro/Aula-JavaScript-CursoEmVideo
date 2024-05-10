@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insira um número</title>
+</head>
+<body>
+
+    <h1>Digite Um Número</h1>
+    <input type="number" name="n" id="n">
+    <input type="button" value="Enviar" onclick="clicar()"> 
+    <div id="res" ></div>
+    
+    <script>
+        function clicar(){
+            let numero = document.getElementById('n')
+            let res = document.getElementById('res')
+            let nInserido = Number(numero.value)
+
+            res.innerHTML = `O número que você inseriu foi ${nInserido}` 
+
+            if (nInserido >= 1){
+                res.innerHTML += '<p>O número digitado é <strong>positivo</strong> </p>'
+            } else if ( nInserido < 0) {
+                res.innerHTML += '<p>O número digitado é negativo</p>'
+
+
+
+            } else {
+                res.innerHTML += '<p>O número digitado é zero</p>'
+            }
+        }
+    </script>
+</body>
+</html>

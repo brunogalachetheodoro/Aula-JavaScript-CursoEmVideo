@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TagName</title>
+    <style>
+        body {
+            font: normal 18pt Arial; 
+        }
+    </style>
+</head>
+<body>
+    <p> Aqui vai um texto </p>
+    <input type = "button" value=" Alterar Texto" onclick="alterar()" >
+
+    <script>
+        let p = document.getElementsByTagName('p')[0]
+    
+        function alterar () {
+            p.innerText= "Texto Alterado"
+        }
+    </script>    
+
+    <h1> Lista Não Ordenada</h1>
+
+    <ul>
+        <li> Item 1</li>
+        <li> Item 2</li>
+        <li> Item 3</li>
+        <li> Item 4</li>
+    </ul>
+
+    <script>
+        let lista = document.getElementsByTagName('li');
+
+        for (let i = 0; i < listaItens.length; i++) {
+    listaItens[i].style.fontWeight = 'bold';
+}
+    </script>
+</body>
+</html>

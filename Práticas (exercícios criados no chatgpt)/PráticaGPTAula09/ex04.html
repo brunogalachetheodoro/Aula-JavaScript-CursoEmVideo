@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Títulos com Estilo em Vermelho</title>
+</head>
+<body>
+    <h1>Título H1</h1>
+    <h2>Título H2</h2>
+    <h3>Título H3</h3>
+    <h4>Título H4</h4>
+    <h5>Título H5</h5>
+    <h6>Título H6</h6>
+
+    <script>
+        // Selecionando todos os elementos de título usando getElementsByTagName()
+        const titulos = document.getElementsByTagName('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
+
+        // Alterando o estilo de todos os títulos para cor vermelha
+        for (let i = 0; i < titulos.length; i++) {
+            titulos[i].style.color = 'red';
+        }
+    </script>
+</body>
+</html>

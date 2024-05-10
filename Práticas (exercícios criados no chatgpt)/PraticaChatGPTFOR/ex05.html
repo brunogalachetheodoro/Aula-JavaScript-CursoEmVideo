@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Pares</title>
+</head>
+<body>
+    <h1>Números Pares</h1>
+    <p>Digite um número: <input type="number" name="n" id="n"> <input type="button" value="Gerar" onclick="gerar()"></p>
+    <div id="res"></div>
+    <script>
+        function gerar () {
+            let n = document.getElementById('n')
+            let res = document.getElementById('res')
+
+            let nInserido = Number(n.value) 
+
+            for(let c = 0; c <= nInserido; c++) {
+                if (c % 2 == 0) {
+                    res.innerHTML += `${c}<br>`
+                }
+            }
+        }
+    </script>
+</body>
+</html>

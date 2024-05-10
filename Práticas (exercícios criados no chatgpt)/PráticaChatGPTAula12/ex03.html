@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+</head>
+<body>
+
+    <h1>Formulário</h1>
+    Nome: <input type="text" name="nome" id="nome">  
+    <br> Idade: <input type="number" name="idade" id="idade"> 
+    <br> Gênero [M / F]: <input type="text" name="genero" id="genero"> 
+    <br> <input type="button" value="Enviar" onclick="clicar()">
+    <div id="res"></div>
+
+    <script>
+        function clicar(){
+
+        let nome = document.getElementById('nome')
+        let genero = document.getElementById('genero')
+        let idade = document.getElementById('idade')
+        
+        let nomeInserido = nome.value
+        let generoInserido = genero.value
+        let idadeInserida = Number(idade.value)
+
+        res.innerHTML = `Olá ${nomeInserido}`
+
+        if (idadeInserida >= 18) {
+            if (generoInserido == 'M' || generoInserido =='m') {
+                res.innerHTML += '<p>Seja Bem Vindo</p>'
+            } else if(generoInserido == 'F' || generoInserido =='f') {
+                res.innerHTML += '<p>Seja Bem Vinda</p>'
+            }
+        } else {
+            res.innerHTML += '<p>Você é menor de idade, não deveria estar aqui</p>'
+        }
+
+              
+        }
+    </script>
+</body>
+</html>
